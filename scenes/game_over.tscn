@@ -1,0 +1,59 @@
+[gd_scene load_steps=5 format=3 uid="uid://c42djnd6cv4v6"]
+
+[ext_resource type="Script" path="res://scripts/game_over.gd" id="1_5f7do"]
+[ext_resource type="Texture2D" uid="uid://dv45lhapwgaey" path="res://assets/images/tittle_screen.jpg" id="2_rxxbb"]
+[ext_resource type="FontFile" uid="uid://tmj5qv3vcvk2" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="3_edse1"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_62ko8"]
+content_margin_left = 10.0
+content_margin_top = 5.0
+content_margin_right = 10.0
+content_margin_bottom = 5.0
+bg_color = Color(0, 0, 0, 1)
+
+[node name="GameOver" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5f7do")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_rxxbb")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -259.0
+offset_top = -72.0
+offset_right = 259.0
+offset_bottom = 72.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_edse1")
+theme_override_font_sizes/font_size = 60
+text = "GAME OVER"
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_62ko8")
+text = "RESTART"
+
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]

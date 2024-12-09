@@ -40,10 +40,10 @@ animations = [{
 "speed": 10.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_3udbr"]
-size = Vector2(12, 14)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ssa2n"]
+size = Vector2(13, 14)
 
-[node name="Enemy" type="Node2D"]
+[node name="Enemy" type="Node2D" groups=["enemies"]]
 z_index = 1
 script = ExtResource("1_hugbw")
 
@@ -53,11 +53,11 @@ autoplay = "default"
 frame = 2
 frame_progress = 0.96795
 
-[node name="Killzone" parent="." instance=ExtResource("2_26a6u")]
+[node name="Killzone" parent="." groups=["enemies"] instance=ExtResource("2_26a6u")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
-position = Vector2(0, 5)
-shape = SubResource("RectangleShape2D_3udbr")
+position = Vector2(-0.5, 4)
+shape = SubResource("RectangleShape2D_ssa2n")
 
 [node name="RayCastRight" type="RayCast2D" parent="."]
 position = Vector2(0, 5)

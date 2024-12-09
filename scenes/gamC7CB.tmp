@@ -302,7 +302,7 @@ texture = ExtResource("2_rsrba")
 [sub_resource type="TileSet" id="TileSet_cdyla"]
 sources/0 = SubResource("TileSetAtlasSource_b2nqj")
 
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_4xtnc"]
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_4pslu"]
 
 [sub_resource type="Animation" id="Animation_g0ly0"]
 length = 0.001
@@ -349,12 +349,12 @@ unique_name_in_owner = true
 script = ExtResource("1_he0en")
 
 [node name="ScoreLabel" type="Label" parent="GameManager"]
-offset_left = 541.0
-offset_top = -132.0
-offset_right = 646.0
-offset_bottom = -111.0
+anchors_preset = -1
+offset_left = 323.0
+offset_top = -110.0
+offset_right = 562.0
+offset_bottom = -68.0
 theme_override_fonts/font = ExtResource("2_niewn")
-theme_override_font_sizes/font_size = 8
 text = "You collected X coins."
 horizontal_alignment = 1
 autowrap_mode = 2
@@ -370,20 +370,20 @@ tile_map_data = PackedByteArray("AAD//wcAAAAAAA4AAAAAAAcAAAAAAA4AAAABAAcAAAAAAA4
 tile_set = SubResource("TileSet_cdyla")
 
 [node name="Player" parent="." instance=ExtResource("1_g7ou1")]
-position = Vector2(40, 64)
+position = Vector2(509, 62)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
-position = Vector2(1, -3)
+position = Vector2(0, -5)
 zoom = Vector2(4, 4)
 limit_bottom = 140
 limit_smoothed = true
 position_smoothing_enabled = true
 
 [node name="Killzone" parent="." instance=ExtResource("5_ido61")]
-position = Vector2(52, 154)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
-shape = SubResource("WorldBoundaryShape2D_4xtnc")
+position = Vector2(93, 157)
+shape = SubResource("WorldBoundaryShape2D_4pslu")
 
 [node name="Coins" type="Node" parent="."]
 
@@ -432,6 +432,3 @@ autoplay = "move"
 
 [node name="Enemy" parent="." instance=ExtResource("6_8imnr")]
 position = Vector2(550, 84)
-
-[node name="Enemy2" parent="." instance=ExtResource("6_8imnr")]
-position = Vector2(168, 4)
