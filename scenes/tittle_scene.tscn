@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://cs1dsqooj4u4h"]
 
 [ext_resource type="Texture2D" uid="uid://dv45lhapwgaey" path="res://assets/images/tittle_screen.jpg" id="1_m8hgs"]
-[ext_resource type="Script" path="res://scripts/tittle_scene.gd" id="1_m77i3"]
+[ext_resource type="Script" uid="uid://cjhkd8dg4tb5p" path="res://scripts/tittle_scene.gd" id="1_m77i3"]
 
 [sub_resource type="ImageTexture" id="ImageTexture_eqc81"]
 

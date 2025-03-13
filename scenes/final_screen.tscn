@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://0aow45sbvhrh"]
 
-[ext_resource type="Script" path="res://scripts/final_screen.gd" id="1_ljj2l"]
+[ext_resource type="Script" uid="uid://ee1p23q3fiwx" path="res://scripts/final_screen.gd" id="1_ljj2l"]
 [ext_resource type="Texture2D" uid="uid://cg4eqt7rpfc8l" path="res://assets/sprites/world_tileset.png" id="1_wqhad"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1kaeh"]

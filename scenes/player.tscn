@@ -1,7 +1,7 @@
 [gd_scene load_steps=27 format=3 uid="uid://d37yrbedxpy54"]
 
 [ext_resource type="Texture2D" uid="uid://bm2pg5domgrdb" path="res://assets/sprites/knight.png" id="1_20127"]
-[ext_resource type="Script" path="res://scripts/player.gd" id="1_u8o6o"]
+[ext_resource type="Script" uid="uid://b1qg5ocdhahho" path="res://scripts/player.gd" id="1_u8o6o"]
 [ext_resource type="PackedScene" uid="uid://ba0a58g5ooqyj" path="res://scenes/fruta.tscn" id="2_vb87l"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3moml"]

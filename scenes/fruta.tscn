@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://ba0a58g5ooqyj"]
 
-[ext_resource type="Script" path="res://scripts/fruta.gd" id="1_f3al8"]
+[ext_resource type="Script" uid="uid://jidrjarjf7ys" path="res://scripts/fruta.gd" id="1_f3al8"]
 [ext_resource type="Texture2D" uid="uid://b8jexo45n7kse" path="res://assets/sprites/fruit.png" id="2_x0wru"]
 
 [sub_resource type="Animation" id="Animation_qjp4t"]
@@ -36,8 +36,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_v0ciy"]
 _data = {
-"RESET": SubResource("Animation_qjp4t"),
-"rotation": SubResource("Animation_4nwst")
+&"RESET": SubResource("Animation_qjp4t"),
+&"rotation": SubResource("Animation_4nwst")
 }
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_k1hij"]
@@ -54,7 +54,7 @@ region_rect = Rect2(2, 50, 11, 13)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_v0ciy")
+&"": SubResource("AnimationLibrary_v0ciy")
 }
 autoplay = "rotation"
 speed_scale = 2.0

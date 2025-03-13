@@ -1,7 +1,7 @@
 [gd_scene load_steps=22 format=4 uid="uid://bp0y2tvwcso1s"]
 
 [ext_resource type="PackedScene" uid="uid://d37yrbedxpy54" path="res://scenes/player.tscn" id="1_g7ou1"]
-[ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_he0en"]
+[ext_resource type="Script" uid="uid://ijgrjd1f5nn" path="res://scripts/game_manager.gd" id="1_he0en"]
 [ext_resource type="FontFile" uid="uid://tmj5qv3vcvk2" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="2_niewn"]
 [ext_resource type="Texture2D" uid="uid://cg4eqt7rpfc8l" path="res://assets/sprites/world_tileset.png" id="2_rsrba"]
 [ext_resource type="PackedScene" uid="uid://ba5i3rp14wi5m" path="res://scenes/platform.tscn" id="3_c4gws"]
@@ -308,6 +308,21 @@ sources/0 = SubResource("TileSetAtlasSource_b2nqj")
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_4xtnc"]
 
+[sub_resource type="Animation" id="Animation_afgw7"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(981, -87)]
+}
+
 [sub_resource type="Animation" id="Animation_jvfrf"]
 resource_name = "move_up"
 length = 1.5
@@ -325,25 +340,10 @@ tracks/0/keys = {
 "values": [Vector2(981, -87), Vector2(984, -157)]
 }
 
-[sub_resource type="Animation" id="Animation_afgw7"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(981, -87)]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_rcj3e"]
 _data = {
-"RESET": SubResource("Animation_afgw7"),
-"move_up": SubResource("Animation_jvfrf")
+&"RESET": SubResource("Animation_afgw7"),
+&"move_up": SubResource("Animation_jvfrf")
 }
 
 [sub_resource type="Animation" id="Animation_g0ly0"]
@@ -380,8 +380,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_1b6gi"]
 _data = {
-"RESET": SubResource("Animation_g0ly0"),
-"move": SubResource("Animation_nerqu")
+&"RESET": SubResource("Animation_g0ly0"),
+&"move": SubResource("Animation_nerqu")
 }
 
 [node name="Game" type="Node2D"]
@@ -490,7 +490,7 @@ position = Vector2(981, -87)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Platforms/Platform3"]
 libraries = {
-"": SubResource("AnimationLibrary_rcj3e")
+&"": SubResource("AnimationLibrary_rcj3e")
 }
 autoplay = "move_up"
 
@@ -500,7 +500,7 @@ position = Vector2(384, 68)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Platforms/Platform2"]
 libraries = {
-"": SubResource("AnimationLibrary_1b6gi")
+&"": SubResource("AnimationLibrary_1b6gi")
 }
 autoplay = "move"
 
